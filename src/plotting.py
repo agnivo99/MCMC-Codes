@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from .diagnostics import MCMCDiagnostics
+from diagnostics import MCMCDiagnostics
 
 
 Array = np.ndarray
