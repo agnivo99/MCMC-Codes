@@ -694,7 +694,7 @@ The diagnostic summary includes quantities such as:
 * posterior standard deviation
 * credible intervals
 * effective sample size
-* split-chain (\hat{R}), when multiple chains are provided
+* split-chain ($\hat{R}$), when multiple chains are provided
 
 For multiple chains, provide samples with shape
 
@@ -722,7 +722,7 @@ A low effective sample size relative to the total number of retained samples ind
 
 ---
 
-## Split-Chain (\hat{R})
+## Split-Chain ($\hat{R}$)
 
 When multiple chains are available, the split-chain (\hat{R}) diagnostic compares within-chain and between-chain variability.
 
