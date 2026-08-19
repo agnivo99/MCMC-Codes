@@ -3,6 +3,7 @@
 This repository contains a modular implementation of an Adaptive Random-Walk Metropolis-Hastings sampler together with convergence diagnostics, plotting utilities, and several example posterior distributions for testing sampler behavior.
 
 The implementation is intended to provide a simple and reusable framework for Bayesian inference problems in which the posterior distribution is available up to an unknown normalization constant.
+
 ---
 
 ## Features
