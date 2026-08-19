@@ -410,9 +410,9 @@ and run using
 ```python
 result = sampler.run(
     x0=np.array([2.0, -2.0]),
-    n_samples=20_000,
-    burn_in=5_000,
-    adapt_until=5_000,
+    n_samples=20000,
+    burn_in=5000,
+    adapt_until=5000,
     start_adapt=500,
     adapt_interval=100,
 )
