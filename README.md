@@ -675,51 +675,6 @@ However, an extremely poor initial covariance can still lead to inefficient earl
 
 ---
 
-## Why Adapt the Proposal Covariance?
-
-A fixed isotropic proposal can perform poorly when the posterior contains:
-
-* strong correlations between parameters
-* significantly different parameter scales
-* narrow directions in parameter space
-* elongated posterior distributions
-* anisotropic posterior geometry
-
-Consider a correlated Gaussian posterior with an elongated diagonal structure.
-
-An isotropic proposal may repeatedly propose moves perpendicular to the high-probability direction, resulting in many rejected samples.
-
-An adaptive covariance can learn the orientation of the target posterior and produce proposals that better align with the posterior geometry.
-
-The correlated Gaussian example,
-
-```text
-example_01_gaussian_2d.py
-```
-
-provides a simple demonstration of this behavior.
-
----
-
-## Limitations of Covariance Adaptation
-
-Adaptive covariance improves local proposal efficiency but does not fundamentally change the fact that the sampler is a local random-walk method.
-
-A single covariance matrix cannot completely represent many complicated posterior geometries.
-
-For example:
-
-* the bimodal Gaussian case tests separated modes,
-* the banana distribution tests nonlinear dependence,
-* Neal's funnel tests position-dependent posterior scale,
-* the Student-(t) example tests heavy tails.
-
-These examples are included specifically to demonstrate both the capabilities and limitations of Adaptive Random-Walk Metropolis sampling.
-
-For strongly multimodal or highly pathological targets, more advanced methods such as tempering, global proposal mechanisms, Hamiltonian Monte Carlo, or other specialized sampling strategies may be preferable.
-
----
-
 # Diagnostics
 
 Posterior diagnostics can be calculated using
