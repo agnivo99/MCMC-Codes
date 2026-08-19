@@ -123,7 +123,7 @@ def main():
         for i in range(chains.shape[0])
     }
 
-    plotter.trace(max_points := None)  # see note below
+    plotter.trace()  # see note below
     plotter.compare_marginals(chain_dict, kde=True)
     plotter.corner()
 
