@@ -376,35 +376,6 @@ p(\boldsymbol{\theta})
 where (d) is the parameter dimension.
 
 Compared with a Gaussian distribution, the Student-(t) distribution has heavier tails. This makes large excursions from the central high-density region more probable.
-
-The example therefore tests whether the sampler can adequately explore a heavy-tailed posterior.
-
-For (\nu>2), the covariance of the multivariate Student-(t) distribution is
-
-```math
-\operatorname{Cov}
-(\boldsymbol{\theta})
-=
-\frac{\nu}{\nu-2}
-\Sigma.
-```
-
-For the example with (\nu=3),
-
-```math
-\operatorname{Cov}
-(\boldsymbol{\theta})
-=
-3\Sigma
-=
-\begin{bmatrix}
-3.0 & 2.4 \\
-2.4 & 6.0
-\end{bmatrix}.
-```
-
-This provides a known theoretical covariance against which the covariance estimated from the MCMC samples can be compared.
-
 ---
 
 # Basic Sampler Interface
