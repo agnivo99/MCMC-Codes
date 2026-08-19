@@ -3,11 +3,6 @@
 This repository contains a modular implementation of an Adaptive Random-Walk Metropolis-Hastings sampler together with convergence diagnostics, plotting utilities, and several example posterior distributions for testing sampler behavior.
 
 The implementation is intended to provide a simple and reusable framework for Bayesian inference problems in which the posterior distribution is available up to an unknown normalization constant.
-
-More details on the methodology and implementation can be found here:
-
-**Reference / documentation:** [ADD LINK HERE](ADD_LINK_HERE)
-
 ---
 
 ## Features
@@ -861,9 +856,9 @@ sampler = AdaptiveMetropolisSampler(
 # 3. Run MCMC
 result = sampler.run(
     x0=x0,
-    n_samples=100_000,
-    burn_in=20_000,
-    adapt_until=20_000,
+    n_samples=100000,
+    burn_in=20000,
+    adapt_until=20000,
     start_adapt=500,
     adapt_interval=100,
 )
@@ -916,10 +911,11 @@ For more reliable convergence assessment, several independent chains with differ
 
 ---
 
-# Reference
+# Related Publication
 
-Additional details regarding the Adaptive Metropolis formulation and implementation can be found at:
+The Adaptive Metropolis-Hastings methodology and Bayesian inference framework used in this repository are related to the following doctoral work:
 
-**[ADD LINK HERE](ADD_LINK_HERE)**
-
-If this repository is used in published work, please cite the corresponding reference once available.
+- **Anabel del Val**,  
+  *Bayesian calibration and assessment of gas-surface interaction models and experiments in atmospheric entry plasmas*,  
+  Ph.D. thesis, Institut Polytechnique de Paris, 2021.  
+  [Thesis available on HAL](https://inria.hal.science/tel-03504757)
