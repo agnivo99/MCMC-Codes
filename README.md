@@ -919,3 +919,5 @@ The Adaptive Metropolis-Hastings methodology and Bayesian inference framework us
   *Bayesian calibration and assessment of gas-surface interaction models and experiments in atmospheric entry plasmas*,  
   Ph.D. thesis, Institut Polytechnique de Paris, 2021.  
   [Thesis available on HAL](https://inria.hal.science/tel-03504757)
+
+The present modular implementation, including the diagnostics, plotting utilities, and benchmark examples, has been further developed and maintained by **Stochastic Hypersonics Research Group**.
