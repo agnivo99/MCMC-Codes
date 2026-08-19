@@ -186,7 +186,6 @@ class MCMCPlotter:
     def marginals(
         self,
         params: Optional[Iterable[int | str]] = None,
-        bins: int = 50,
         show_truth: bool = True,
         density: bool = True,
     ) -> None:
@@ -202,11 +201,10 @@ class MCMCPlotter:
         for j in indices:
             plt.figure(figsize=(5, 3))
 
-            plt.hist(
+            sns.kdeplot(
                 flat[:, j],
-                bins=bins,
-                density=density,
-                alpha=0.75,
+                fill=True,
+                alpha=0.3
             )
 
             if show_truth and self.truths is not None:
@@ -295,10 +293,9 @@ class MCMCPlotter:
     def corner(
         self,
         params: Optional[Iterable[int | str]] = None,
-        bins: int = 40,
         max_points: int = 10_000,
         show_truth: bool = True,
-        show_titles: bool = True,
+        show_titles: bool = False,
         figsize_scale: float = 2.7,
     ) -> None:
         """
@@ -353,11 +350,12 @@ class MCMCPlotter:
                 x_scatter = scatter_data[:, j]
 
                 if i == j:
-                    ax.hist(
-                        x,
-                        bins=bins,
-                        density=True,
-                        alpha=0.75,
+                    sns.kdeplot(
+                        x=x,
+                        fill=True,
+                        alpha=0.3,
+                        linewidth=2,
+                        ax=ax,
                     )
 
                     if show_truth and self.truths is not None:
@@ -378,19 +376,21 @@ class MCMCPlotter:
                     else:
                         ax.set_title(name_x, fontsize=10)
 
-                    ax.set_ylabel("Density")
+                    ax.set_ylabel("p.d.f.")
 
                 else:
                     idx_y = indices[i]
                     name_y = self.parameter_names[idx_y]
                     y_scatter = scatter_data[:, i]
 
-                    ax.plot(
-                        x_scatter,
-                        y_scatter,
-                        ".",
-                        alpha=0.35,
-                        markersize=2,
+                    sns.kdeplot(
+                        x=x_scatter,
+                        y=y_scatter,
+                        fill=True,
+                        levels=15,
+                        thresh=0.05,
+                        alpha=0.7,
+                        ax=ax,
                     )
 
                     if show_truth and self.truths is not None:
