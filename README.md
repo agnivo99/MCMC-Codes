@@ -374,8 +374,6 @@ p(\boldsymbol{\theta})
 ```
 
 where (d) is the parameter dimension.
-
-Compared with a Gaussian distribution, the Student-(t) distribution has heavier tails. This makes large excursions from the central high-density region more probable.
 ---
 
 # Basic Sampler Interface
