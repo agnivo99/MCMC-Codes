@@ -130,37 +130,6 @@ with covariance
 0.8 & 2.0
 \end{bmatrix}.
 ```
-
-The true posterior mean is
-
-```math
-\boldsymbol{\mu} =
-\begin{bmatrix}
-0 \\
-0
-\end{bmatrix}.
-```
-
-This example provides a basic verification case because the exact target mean and covariance are known.
-
-A correctly converged chain should reproduce approximately
-
-```math
-\mathbb{E}[\boldsymbol{\theta}]
-=
-\boldsymbol{0}
-```
-
-and
-
-```math
-\operatorname{Cov}(\boldsymbol{\theta})
-\approx
-\Sigma.
-```
-
-It also tests whether the adaptive proposal covariance learns the correlation between the two parameters.
-
 ---
 
 ## Example 2: Bimodal Gaussian Mixture
