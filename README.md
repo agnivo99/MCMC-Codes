@@ -538,7 +538,7 @@ C_n
 \epsilon I
 ```
 
-where (\epsilon I) is a small diagonal regularization term used to help maintain a positive-definite covariance matrix.
+where ($\epsilon$ I) is a small diagonal regularization term used to help maintain a positive-definite covariance matrix.
 
 The resulting proposal distribution therefore becomes
 
