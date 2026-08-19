@@ -468,10 +468,10 @@ s^2 C_n
 
 Here,
 
-* (\boldsymbol{\theta}^{(n)}) is the current Markov-chain state,
-* (C_n) is the proposal covariance matrix,
-* (s) is a scaling factor,
-* (d) is the dimension of the parameter space.
+- $\boldsymbol{\theta}^{(n)}$ is the current Markov-chain state,
+- $C_n$ is the proposal covariance matrix,
+- $s$ is a scaling factor,
+- $d$ is the dimension of the parameter space.
 
 The default scaling used by the implementation is
 
@@ -528,15 +528,15 @@ Conceptually, the adaptive covariance takes the form
 ```math
 C_n
 =
-\operatorname{Cov}
+\mathrm{Cov}
 \left(
 \boldsymbol{\theta}^{(0)},
 \ldots,
 \boldsymbol{\theta}^{(n)}
 \right)
 +
-\epsilon I,
-```
+\epsilon I
+'''
 
 where (\epsilon I) is a small diagonal regularization term used to help maintain a positive-definite covariance matrix.
 
@@ -572,9 +572,9 @@ The adaptation behavior is controlled by several arguments in `sampler.run()`:
 ```python
 result = sampler.run(
     x0=x0,
-    n_samples=20_000,
-    burn_in=5_000,
-    adapt_until=5_000,
+    n_samples=20000,
+    burn_in=5000,
+    adapt_until=5000,
     start_adapt=500,
     adapt_interval=100,
 )
@@ -641,7 +641,7 @@ so that covariance adaptation occurs during burn-in and the proposal covariance 
 Specifies the total number of MCMC iterations.
 
 ```python
-n_samples=20_000
+n_samples=20000
 ```
 
 The number of retained samples is therefore approximately
