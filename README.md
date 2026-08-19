@@ -536,7 +536,7 @@ C_n
 \right)
 +
 \epsilon I
-'''
+```
 
 where (\epsilon I) is a small diagonal regularization term used to help maintain a positive-definite covariance matrix.
 
