@@ -372,8 +372,6 @@ p(\boldsymbol{\theta})
 -(\nu+d)/2
 },
 ```
-
-where (d) is the parameter dimension.
 ---
 
 # Basic Sampler Interface
