@@ -430,10 +430,10 @@ The sampler can then be initialized as
 import numpy as np
 
 sampler = AdaptiveMetropolisSampler(
-    log_posterior=log_posterior,
-    initial_cov=0.1 * np.eye(2),
-    parameter_names=["theta_0", "theta_1"],
-    rng=np.random.default_rng(123),
+    log_posterior=log_posterior, # Replace with your log posterior function
+    initial_cov=0.1 * np.eye(d), # "d" is the dimension of theta
+    parameter_names=["theta_0", "theta_1"], # This is optional to give names to the parameters
+    rng=np.random.default_rng(123), # A random seed generator
 )
 ```
 
@@ -441,12 +441,12 @@ and run using
 
 ```python
 result = sampler.run(
-    x0=np.array([2.0, -2.0]),
-    n_samples=20000,
-    burn_in=5000,
-    adapt_until=5000,
-    start_adapt=500,
-    adapt_interval=100,
+    x0=np.array([2.0, -2.0]), # An initial starting point for the chain
+    n_samples=20000, # Number of samples including burn-in
+    burn_in=5000, # Number of burn-in
+    adapt_until=5000, # Adapt till what sample
+    start_adapt=500, # Adaptation start
+    adapt_interval=100, # Rate of adaptation
 )
 ```
 
