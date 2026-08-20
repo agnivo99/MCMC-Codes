@@ -6,6 +6,38 @@ The implementation is intended to provide a simple and reusable framework for Ba
 
 ---
 
+## Table of Contents
+
+- [Features](#features)
+- [Repository Structure](#repository-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Example Test Cases](#example-test-cases)
+  - [Example 1: Correlated 2D Gaussian](#example-1-correlated-2d-gaussian)
+  - [Example 2: Bimodal Gaussian Mixture](#example-2-bimodal-gaussian-mixture)
+  - [Example 3: Multiple Chains in Parallel](#example-3-multiple-chains-in-parallel)
+  - [Example 4: Banana-Shaped Posterior](#example-4-banana-shaped-posterior)
+  - [Example 5: Neal's Funnel Posterior](#example-5-neals-funnel-posterior)
+  - [Example 6: Correlated 2D Student-t Posterior](#example-6-correlated-2d-student-t-posterior)
+- [Basic Sampler Interface](#basic-sampler-interface)
+- [Adaptive Metropolis Method](#adaptive-metropolis-method)
+  - [Metropolis-Hastings Acceptance Step](#metropolis-hastings-acceptance-step)
+  - [Adaptive Proposal Covariance](#adaptive-proposal-covariance)
+  - [Adaptation Controls](#adaptation-controls)
+  - [Initial Proposal Covariance](#initial-proposal-covariance)
+- [Diagnostics](#diagnostics)
+  - [Effective Sample Size](#effective-sample-size)
+  - [Split-Chain R-hat](#split-chain-r-hat)
+- [Plotting](#plotting)
+  - [Trace Plots](#trace-plots)
+  - [Autocorrelation Plots](#autocorrelation-plots)
+  - [Marginal Posterior Plots](#marginal-posterior-plots)
+  - [Corner Plots](#corner-plots)
+  - [Chain-Wise Marginal Comparison](#chain-wise-marginal-comparison)
+- [Recommended Workflow](#recommended-workflow)
+- [Notes](#notes)
+- [Related Publication](#related-publication)
+
 ## Features
 
 * Adaptive proposal covariance during burn-in
