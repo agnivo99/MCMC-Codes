@@ -704,15 +704,20 @@ However, an extremely poor initial covariance can still lead to inefficient earl
 ---
 
 # Diagnostics
+Standard diagnostics of the MCMC chain can be assessed through the diagnostic module.
 
-Posterior diagnostics can be calculated using
+Create a diagnostic object using  
 
 ```python
 diag = MCMCDiagnostics(
-    samples,
+    samples, # These can be both all samples or post burn-in samples.
     parameter_names=["theta_0", "theta_1"],
 )
+```
 
+Print diagnostic summary by 
+
+```
 diag.print_summary()
 ```
 
