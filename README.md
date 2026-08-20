@@ -953,4 +953,4 @@ The Adaptive Metropolis-Hastings methodology and Bayesian inference framework us
   Ph.D. thesis, Institut Polytechnique de Paris, 2021.  
   [Thesis available on HAL](https://inria.hal.science/tel-03504757)
 
-The present modular implementation, including the diagnostics, plotting utilities, and benchmark examples, has been further developed and maintained by **Stochastic Hypersonics Research Group**.
+The present modular implementation, including the diagnostics, plotting utilities, and benchmark examples, has been further developed and maintained by [**Stochastic Hypersonics Research Group**](http://www.umn.edu/~adelvalb).
