@@ -767,6 +767,9 @@ Substantially larger values may indicate incomplete convergence or poor explorat
 
 # Plotting
 
+Standard Plotting of important diagnostic quantities of the MCMC chain can be done through the plotting module.
+Note - Plotting module already calls the Diagnostic module inside it.
+
 Create a plotting object using
 
 ```python
@@ -941,9 +944,9 @@ For more reliable convergence assessment, several independent chains with differ
 * Adaptive covariance can substantially improve sampling efficiency for correlated and anisotropic unimodal posteriors.
 * Adaptive covariance does not eliminate the limitations of local random-walk proposals.
 * Strong multimodality can result in chains becoming trapped in individual modes.
-* Nonlinear posterior geometries, such as the banana distribution, cannot be fully represented by a single covariance matrix.
-* Funnel-shaped posteriors can be difficult because the appropriate proposal scale varies throughout parameter space.
-* Heavy-tailed distributions may require longer chains to characterize the tails accurately.
+* Nonlinear posterior geometries, such as the banana distribution, cannot be fully represented by a single covariance matrix.(See Example 4)
+* Funnel-shaped posteriors can be difficult because the appropriate proposal scale varies throughout parameter space.(See Example 5)
+* Heavy-tailed distributions may require longer chains to characterize the tails accurately. (See Example 6)
 * Multiple independent chains should be used whenever computationally feasible.
 * Posterior diagnostics should be interpreted collectively rather than relying on any single convergence metric.
 
@@ -956,6 +959,6 @@ The Adaptive Metropolis-Hastings methodology and Bayesian inference framework us
 - **Anabel del Val**,  
   *Bayesian calibration and assessment of gas-surface interaction models and experiments in atmospheric entry plasmas*,  
   Ph.D. thesis, Institut Polytechnique de Paris, 2021.  
-  [Thesis available on HAL](https://inria.hal.science/tel-03504757)
+  [Thesis Link](https://inria.hal.science/tel-03504757)
 
 The present modular implementation, including the diagnostics, plotting utilities, and benchmark examples, has been further developed and maintained by [**Stochastic Hypersonics Research Group**](http://www.umn.edu/~adelvalb).
