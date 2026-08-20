@@ -46,7 +46,7 @@ The implementation is intended to provide a simple and reusable framework for Ba
 * Multiple-chain sampling
 * Parallel execution of independent chains
 * Effective sample size
-* Split-chain (\hat{R})
+* Split-chain ($\hat{R}$)
 * Trace plots
 * Autocorrelation plots
 * Marginal posterior plots
